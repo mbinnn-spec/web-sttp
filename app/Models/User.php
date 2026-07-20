@@ -38,4 +38,19 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+        public function proposals()
+    {
+        return $this->hasMany(Proposal::class, 'ketua_peneliti_id');
+    }
+
+    public function proposalMembers()
+    {
+        return $this->hasMany(ProposalMember::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'reviewer_id');
+    }
 }
