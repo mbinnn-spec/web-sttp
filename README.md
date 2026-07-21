@@ -1,58 +1,311 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# PKL
 
-## About Laravel
+### *Research & Community Service Management System*
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=24&duration=3500&pause=1000&color=4F8EF7&center=true&vCenter=true&width=700&lines=Laravel+13+REST+API;Vue+3+%2B+Vite;Sanctum+Authentication;Role-Based+Access+Control;Research+Management+System" />
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![License](https://img.shields.io/badge/license-Educational-blue?style=for-the-badge)
+![Laravel](https://img.shields.io/badge/Laravel-13-red?style=for-the-badge\&logo=laravel)
+![Vue](https://img.shields.io/badge/Vue-3-42b883?style=for-the-badge\&logo=vuedotjs)
+![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?style=for-the-badge\&logo=php)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge\&logo=mysql)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+*A modern web application for managing research proposals, budgets, reviews, and research reports at STT Pati.*
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+</div>
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+# ✨ Overview
 
-## Agentic Development
+Managing research proposals manually can be slow, difficult to monitor, and prone to data inconsistency.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+**STTP PKL Web** digitizes the complete workflow into one integrated platform.
 
-```bash
-composer require laravel/boost --dev
+Users can:
 
-php artisan boost:install
+* 🔐 Login securely
+* 👥 Manage users
+* 📑 Submit research proposals
+* 💰 Manage research budgets (RAB)
+* 📎 Upload proposal documents
+* 👨‍🏫 Review submissions
+* 📄 Submit research reports
+* 📊 Track proposal status
+
+---
+
+# 🖼 Preview
+
+> Replace these images after your frontend is complete.
+
+```
+📁 docs/
+├── login.png
+├── dashboard.png
+├── proposal.png
+├── review.png
+└── report.png
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+---
 
-## Contributing
+# ⚙ Tech Stack
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Backend
 
-## Code of Conduct
+<p>
+<img src="https://skillicons.dev/icons?i=laravel,php,mysql"/>
+</p>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* Laravel 13
+* Laravel Sanctum
+* REST API
+* Eloquent ORM
+* MySQL
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Frontend
 
-## License
+<p>
+<img src="https://skillicons.dev/icons?i=vue,vite,bootstrap,ts"/>
+</p>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* Vue 3
+* Vue Router
+* Pinia
+* Axios
+* Bootstrap 5
+
+---
+
+## Development Tools
+
+<p>
+<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,npm"/>
+</p>
+
+---
+
+# 🚀 Features
+
+## Authentication
+
+* Secure Login
+* Sanctum Authentication
+* Role Middleware
+* Change Password
+
+---
+
+## User Management
+
+* Create User
+* Edit User
+* Delete User
+* Reset Password
+
+---
+
+## Proposal
+
+* Submit Proposal
+* Draft Proposal
+* Update Proposal
+* Delete Proposal
+* Proposal Detail
+
+---
+
+## Proposal Members
+
+* Add Members
+* Update Members
+* Remove Members
+
+---
+
+## Proposal Budget (RAB)
+
+* Add Budget Items
+* Update Budget
+* Delete Budget
+* Automatic Total Calculation
+
+---
+
+## Proposal Files
+
+* Upload Files
+* Replace Files
+* Delete Files
+* Download Files
+
+---
+
+## Review
+
+* Reviewer Dashboard
+* Proposal Review
+* Review History
+* Status Update
+
+---
+
+## Research Reports
+
+* Upload Final Report
+* Edit Report
+* Download Report
+
+---
+
+# 📂 Project Structure
+
+```text
+backend/
+│
+├── app/
+├── database/
+├── routes/
+├── storage/
+├── config/
+└── ...
+
+frontend/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── layouts/
+│   ├── router/
+│   ├── services/
+│   ├── stores/
+│   ├── views/
+│   └── utils/
+└── ...
+```
+
+---
+
+# ⚡ Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/USERNAME/sttp-pkl-web.git
+```
+
+---
+
+## Backend
+
+```bash
+cd backend
+
+composer install
+
+cp .env.example .env
+
+php artisan key:generate
+
+php artisan migrate --seed
+
+php artisan storage:link
+
+php artisan serve
+```
+
+---
+
+## Frontend
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+---
+
+# 📡 REST API Modules
+
+| Module           | Status |
+| ---------------- | ------ |
+| Authentication   | ✅      |
+| Dashboard        | ✅      |
+| User Management  | ✅      |
+| Proposal         | ✅      |
+| Proposal Members | ✅      |
+| Proposal Budget  | ✅      |
+| Proposal Files   | ✅      |
+| Research Reports | ✅      |
+| Reviews          | ✅      |
+| Profile          | ✅      |
+
+---
+
+# 🎯 Roadmap
+
+* [x] Laravel REST API
+* [x] Sanctum Authentication
+* [x] User Management
+* [x] Proposal CRUD
+* [x] Proposal Member CRUD
+* [x] Proposal Budget CRUD
+* [x] Proposal File CRUD
+* [x] Review CRUD
+* [x] Research Report CRUD
+* [ ] Vue Dashboard
+* [ ] Responsive UI
+* [ ] Notifications
+* [ ] Export PDF
+* [ ] Email Notifications
+
+---
+
+# 📈 Project Architecture
+
+```text
+                 Browser
+                    │
+                    ▼
+            Vue 3 + Bootstrap
+                    │
+          Axios REST API Request
+                    │
+                    ▼
+        Laravel 13 REST API Server
+                    │
+         Sanctum Authentication
+                    │
+                    ▼
+                MySQL Database
+```
+
+---
+
+# 👨‍💻 Developed By
+
+**Bintang Anggara Kusuma**
+
+Student of SMK Tunas Harapan Pati
+
+Backend Developer • Laravel Enthusiast • Vue Learner
+
+---
+
+<div align="center">
+
+### ⭐ If you like this project, don't forget to leave a star!
+
+*"Code. Learn. Build. Improve."*
+
+</div>
