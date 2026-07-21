@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Api\Proposal;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Proposal\StoreProposalRabRequest;
+use App\Http\Requests\Proposal\UpdateProposalRabRequest;
 use App\Models\ProposalRab;
-use Illuminate\Http\Request;
 
 class ProposalRabController extends Controller
 {
@@ -13,16 +14,9 @@ class ProposalRabController extends Controller
         return ProposalRab::with('proposal')->get();
     }
 
-    public function store(Request $request)
+    public function store(StoreProposalRabRequest $request)
     {
-        $validated = $request->validate([
-            'proposal_id' => 'required|exists:proposals,id',
-            'kelompok' => 'required|string|max:255',
-            'item' => 'required|string|max:255',
-            'satuan' => 'required|string|max:100',
-            'harga' => 'required|numeric|min:0',
-            'jumlah' => 'required|integer|min:1',
-        ]);
+        $validated = $request->validated();
 
         $validated['subtotal'] = $validated['harga'] * $validated['jumlah'];
 
@@ -39,15 +33,9 @@ class ProposalRabController extends Controller
         return $proposalRab->load('proposal');
     }
 
-    public function update(Request $request, ProposalRab $proposalRab)
+    public function update(UpdateProposalRabRequest $request, ProposalRab $proposalRab)
     {
-        $validated = $request->validate([
-            'kelompok' => 'required|string|max:255',
-            'item' => 'required|string|max:255',
-            'satuan' => 'required|string|max:100',
-            'harga' => 'required|numeric|min:0',
-            'jumlah' => 'required|integer|min:1',
-        ]);
+        $validated = $request->validated();
 
         $validated['subtotal'] = $validated['harga'] * $validated['jumlah'];
 

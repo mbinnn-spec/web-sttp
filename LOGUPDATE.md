@@ -102,3 +102,40 @@ Melakukan pengembangan backend sistem manajemen proposal penelitian STTP dengan 
 5. Implementasi Review CRUD.
 6. Pengujian endpoint menggunakan Postman.
 7. Integrasi Backend dengan Frontend Vue 3.
+
+## 2026-07-21
+
+### Backend
+- Completed Proposal File CRUD module.
+- Added file upload, update, and delete functionality.
+- Implemented automatic file storage using Laravel Storage.
+- Completed Research Report CRUD module.
+- Added report file upload and storage management.
+- Implemented Review CRUD module.
+- Added proposal-review relationship.
+- Added reviewer relationship.
+- Added validation for review status and notes.
+- Tested CRUD endpoints for Proposal File, Research Report, and Review using Postman.
+- Prepared backend for final refactoring before Vue frontend integration.
+
+### Notes
+- Logout endpoint will be implemented later.
+- Planned improvement:
+  - Set `reviewer_id` automatically from authenticated user (`Auth::id()`).
+  - Review API responses and middleware consistency before frontend development.
+
+## status
+✅ Authentication
+✅ Dashboard
+✅ Profile
+✅ Change Password
+✅ Admin User Management
+✅ Proposal
+✅ Proposal Member
+✅ Proposal RAB
+✅ Proposal File
+✅ Research Report
+✅ Review
+⬜ Final Backend Refactor
+⬜ Logout
+⬜ Vue Frontend

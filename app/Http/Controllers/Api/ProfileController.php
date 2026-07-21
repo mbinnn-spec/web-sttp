@@ -17,14 +17,14 @@ class ProfileController extends Controller
     public function update(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
+            'nama' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email,' . Auth::id(),
         ]);
 
         $user = Auth::user();
 
         $user->update([
-            'name' => $request->name,
+            'nama' => $request->nama,
             'email' => $request->email,
         ]);
 
