@@ -15,7 +15,6 @@ class StoreReviewRequest extends FormRequest
     {
         return [
             'proposal_id' => 'required|exists:proposals,id',
-            'reviewer_id' => 'required|exists:users,id',
             'status' => 'required|in:disetujui,revisi,ditolak',
             'catatan' => 'nullable|string',
         ];

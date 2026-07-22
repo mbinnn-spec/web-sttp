@@ -25,6 +25,7 @@ class UserController extends Controller
                 'data' => $users
             ]);
         }
+        
         public function store(Request $request)
     {
         $validated = $request->validate([
@@ -47,6 +48,31 @@ class UserController extends Controller
             'data' => $user,
         ], 201);
     }
+
+    public function show($id)
+    {
+        $user = User::select(
+            'id',
+            'nama',
+            'email',
+            'role',
+            'created_at'
+        )->find($id);
+
+        if (!$user) {
+            return response()->json([
+                'success' => false,
+                'message' => 'User tidak ditemukan.'
+            ], 404);
+        }
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Data user berhasil diambil.',
+            'data' => $user
+        ]);
+    }
+
     public function update(Request $request, $id)
     {
         $user = User::find($id);

@@ -11,7 +11,11 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        return response()->json(Auth::user());
+        return response()->json([
+            'success' => true,
+            'message' => 'Profil berhasil diambil.',
+            'data' => Auth::user(),
+]);
     }
 
     public function update(Request $request)
@@ -26,6 +30,7 @@ class ProfileController extends Controller
         $user->update([
             'nama' => $request->nama,
             'email' => $request->email,
+            'data' => $user,
         ]);
 
         return response()->json([
@@ -45,6 +50,7 @@ class ProfileController extends Controller
 
         if (! Hash::check($request->old_password, $user->password)) {
             return response()->json([
+                'success' => false,
                 'message' => 'Password lama salah.'
             ], 422);
         }
@@ -54,7 +60,8 @@ class ProfileController extends Controller
         ]);
 
         return response()->json([
-            'message' => 'Password berhasil diubah.'
+            'success' => true,
+            'message' => 'Password berhasil diubah.',
         ]);
     }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Proposal\StoreReviewRequest;
 use App\Http\Requests\Proposal\UpdateReviewRequest;
 use App\Models\Review;
+use Illuminate\Support\Facades\Auth;
 
 class ReviewController extends Controller
 {
@@ -18,7 +19,10 @@ class ReviewController extends Controller
 
     public function store(StoreReviewRequest $request)
     {
-        $review = Review::create($request->validated());
+        $review = Review::create([
+            ...$request->validated(),
+            'reviewer_id' => Auth::id(),
+        ]);
 
         return response()->json([
             'message' => 'Review berhasil ditambahkan.',

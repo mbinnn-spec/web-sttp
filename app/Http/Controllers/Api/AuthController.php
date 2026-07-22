@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class AuthController extends Controller
 {
     public function login(Request $request)
@@ -26,17 +27,22 @@ class AuthController extends Controller
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()->json([
-            'message' => 'Login berhasil',
-            'token' => $token,
-            'user' => $user
+            'success' => true,
+            'message' => 'Login berhasil.',
+            'data' => [
+                'token' => $token,
+                'user' => $user,
+            ],
         ]);
     }
-        public function logout(Request $request)
+
+    public function logout(Request $request)
     {
         $request->user()->currentAccessToken()->delete();
 
         return response()->json([
-            'message' => 'Logout berhasil.'
+            'success' => true,
+            'message' => 'Logout berhasil.',
         ]);
     }
 }
