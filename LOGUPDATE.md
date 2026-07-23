@@ -139,3 +139,107 @@ Melakukan pengembangan backend sistem manajemen proposal penelitian STTP dengan 
 ⬜ Final Backend Refactor
 ⬜ Logout
 ⬜ Vue Frontend
+
+# LOG UPDATE
+
+## Date
+23 July 2026
+
+## Project
+STTP Research & Community Service Information System
+
+---
+
+## Backend Progress
+
+### Ketua LPPM Module
+- Added LPPM Dashboard API.
+- Added proposal list endpoint for LPPM validation.
+- Added proposal detail endpoint.
+- Implemented proposal approval workflow.
+- Implemented proposal rejection workflow.
+- Implemented proposal revision workflow.
+- Added status validation before review processing.
+- Refactored review processing into reusable private methods.
+- Separated validation using dedicated Form Requests.
+- Completed Postman testing for all LPPM endpoints.
+
+---
+
+### Ketua STT Module
+- Added Ketua STT Dashboard API.
+- Added proposal list endpoint.
+- Added proposal detail endpoint.
+- Implemented final proposal approval workflow.
+- Implemented proposal rejection workflow.
+- Added proposal status validation.
+- Reused review processing architecture from LPPM.
+- Completed Postman testing for all Ketua STT endpoints.
+
+---
+
+### Proposal File
+- Added authenticated download endpoint.
+- Implemented secure file download using Laravel Storage.
+- Verified download functionality through Postman.
+
+---
+
+## Route Improvements
+
+- Organized API routes by module.
+- Added dedicated routes for Ketua STT.
+- Added authenticated proposal file download route.
+- Removed redundant middleware nesting.
+
+---
+
+## Testing
+
+### Successfully Tested
+- Login
+- Logout
+- Dashboard
+- Profile
+- User CRUD
+- Proposal CRUD
+- Proposal Member CRUD
+- Proposal RAB CRUD
+- Proposal File CRUD
+- Proposal File Download
+- Research Report CRUD
+- Review CRUD
+- Ketua LPPM Approval Flow
+- Ketua STT Approval Flow
+
+---
+
+## Current Backend Status
+
+Core backend development is considered complete.
+
+Implemented modules:
+- Authentication
+- Admin
+- Proposal Management
+- Proposal Member
+- Proposal RAB
+- Proposal File
+- Proposal Download
+- Research Report
+- Review
+- Ketua LPPM
+- Ketua STT
+
+---
+
+## Next Development Phase
+
+- Start Vue 3 frontend implementation.
+- Build authentication UI.
+- Build dashboard layout.
+- Build Admin pages.
+- Build Proposal pages.
+- Build Ketua LPPM pages.
+- Build Ketua STT pages.
+- Connect frontend with existing REST API.

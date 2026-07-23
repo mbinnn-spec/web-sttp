@@ -79,4 +79,20 @@ class ProposalFileController extends Controller
             'message' => 'File proposal berhasil dihapus.'
         ]);
     }
+
+    public function download(ProposalFile $proposalFile)
+    {
+        if (!Storage::disk('public')->exists($proposalFile->path_file)) {
+            return response()->json([
+                'success' => false,
+                'message' => 'File tidak ditemukan.'
+            ], 404);
+        }
+
+        return Storage::disk('public')->download(
+            $proposalFile->path_file,
+            $proposalFile->nama_file
+        );
+    }
+
 }
